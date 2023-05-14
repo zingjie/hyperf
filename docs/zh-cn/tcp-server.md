@@ -2,6 +2,13 @@
 
 框架默认提供创建 `TCP/UDP` 服务的能力。只需要进行简易的配置，便可使用。
 
+# 注意事项
+
+Docker 默认使用 TCP 协议来通信，如果你需要使用 UDP 协议，你需要通过配置 Docker 网络来实现。  
+```shell
+docker run -p 9502:9502/udp <image-name>
+```
+
 ## 使用 TCP 服务
 
 ### 创建 TcpServer 类
